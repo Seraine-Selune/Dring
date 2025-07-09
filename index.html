@@ -7,34 +7,26 @@
   </head>
   <body>
     <div id="phone">
-      <button id="class-button" hide-id="phone" show-id="phone_picked_up">PHONE IMAGE</button>
+      <button onclick="toggleDiv('phone', 'phone_picked_up')">PHONE IMAGE</button>
     </div>
-    <div id="phone_picked_up" style="display: none">
+    <div id="phone_picked_up" class="hidden">
       phone picked up image
-      <button id="class-button" hide-id="phone_picked_up" show-id="phone_call_ended">Hang up</button>
-      <button id="class-button" hide-id="phone_picked_up" show-id="phone_listening">Listen</button>
+      <button onclick="toggleDiv('phone_picked_up', 'phone_call_ended')">Hang up</button>
+      <button onclick="toggleDiv('phone_picked_up', 'phone_listening')">Listen</button>
     </div>
-    <div id="phone_listening" style="display: none">
+    <div id="phone_listening" class="hidden">
       noises
-      <button id="class-button" hide-id="phone_picked_up" show-id="phone_call_ended">Hang up</button>
+      <button onclick="toggleDiv('phone_picked_up', 'phone_call_ended')">Hang up</button>
     </div>
-    <div id="phone_call_ended" style="display: none">
+    <div id="phone_call_ended" class="hidden">
       phone hung up
     </div>
     
     <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        document.querySelectorAll('.class-button').forEach(button => {
-          console.log(button.getAttribute('data-hide-id'), button.getAttribute('data-show-id')); // Log the IDs to make sure they're correct
-          button.addEventListener('click', function() {
-            console.log(hideId, showId);
-            const hideId = this.getAttribute('hide-id');
-            const showId = this.getAttribute('show-id');
-            document.getElementById(hideId).style.display = 'none';
-            document.getElementById(showId).style.display = 'inline-block';
-          });
-        });
-      });
+      function toggleDiv(hideId, showId) {
+        document.getElementById(hideId).classList.add('hidden');
+        document.getElementById(showId).classList.remove('hidden');
+      }
     </script>
   </body>
 </html>
