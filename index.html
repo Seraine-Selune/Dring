@@ -25,6 +25,7 @@
     <script>
       document.addEventListener('DOMContentLoaded', function() {
         document.querySelectorAll('.class-button').forEach(button => {
+          console.log(button.getAttribute('data-hide-id'), button.getAttribute('data-show-id')); // Log the IDs to make sure they're correct
           button.addEventListener('click', function() {
             console.log(hideId, showId);
             const hideId = this.getAttribute('hide-id');
