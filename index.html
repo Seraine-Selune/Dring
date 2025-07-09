@@ -23,11 +23,13 @@
     </div>
     
     <script>
-      button.addEventListener('click', function() {
-        const hideId = this.getAttribute('hide-id');
-        const showId = this.getAttribute('show-id');
-        document.getElementById(hideId).style.display = 'none';
-        document.getElementById(showId).style.display = 'inline-block';
+      document.querySelectorAll('.toggleBtn').forEach(button => {
+        button.addEventListener('click', function() {
+          const hideId = this.getAttribute('hide-id');
+          const showId = this.getAttribute('show-id');
+          document.getElementById(hideId).style.display = 'none';
+          document.getElementById(showId).style.display = 'inline-block';
+        });
       });
     </script>
   </body>
