@@ -7,7 +7,15 @@
   </head>
   <body>
     <div id="phone"><button id="class-button" hide-id="phone" show-id="phone_picked_up">PHONE IMAGE</button></div>
-    <div id="phone_picked_up" style="display: none">phone picked up image</div>
+    <div id="phone_picked_up" style="display: none">phone picked up image
+      <button id="class-button" hide-id="phone_picked_up" show-id="phone_call_ended">Hang up</button>
+      <button id="class-button" hide-id="phone_picked_up" show-id="phone_listening">Listen</button>
+    </div>
+    <div id="phone_listening" style="display: none">noises
+      <button id="class-button" hide-id="phone_picked_up" show-id="phone_call_ended">Hang up</button>
+    </div>
+    <div id="phone_call_ended" style="display: none">phone hung up
+    </div>
     
     <script>
       button.addEventListener('click', function() {
