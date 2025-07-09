@@ -6,12 +6,13 @@
     <title>Pick Up</title>
   </head>
   <body>
-    <button id="class-button">class change</button>
-    <div id="phone">phone image</div>
+    <div id="phone"><button id="class-button" hide-id="phone" show-id="phone_picked_up">PHONE IMAGE</button></div>
+    <div id="phone_picked_up">phone picked up image</div>
     
     <script>
       document.getElementById("class-button").addEventListener("click", () => {
-        document.getElementById("phone").style.display = "none";
+        document.getElementById(this.getAttribute('hide-id')).style.display = "none";
+        document.getElementById(this.getAttribute('show-id')).style.display = "inline-block";
       })
     </script>
     <div id="test">
