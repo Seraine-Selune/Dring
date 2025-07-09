@@ -5,3 +5,7 @@ html {
 .hidden {
   display: none;
 }
+
+button {
+  display: inline-block;
+}
