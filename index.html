@@ -23,12 +23,14 @@
     </div>
     
     <script>
-      document.querySelectorAll('.class-button').forEach(button => {
-        button.addEventListener('click', function() {
-          const hideId = this.getAttribute('hide-id');
-          const showId = this.getAttribute('show-id');
-          document.getElementById(hideId).style.display = 'none';
-          document.getElementById(showId).style.display = 'inline-block';
+      document.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll('.class-button').forEach(button => {
+          button.addEventListener('click', function() {
+            const hideId = this.getAttribute('hide-id');
+            const showId = this.getAttribute('show-id');
+            document.getElementById(hideId).style.display = 'none';
+            document.getElementById(showId).style.display = 'inline-block';
+          });
         });
       });
     </script>
