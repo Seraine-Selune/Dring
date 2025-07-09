@@ -6,6 +6,14 @@
     <title>Pick Up</title>
   </head>
   <body>
+    <button id="class-button">class change</button>
+    <div id="title">this is the title</div>
+    
+    <script>
+      document.getElementById("class-button").addEventListener("click", () => {
+        document.getElementById("title").classList.add("the-class");
+      })
+    </script>
     <div id="test">
       <p>test</p>
     </div>
