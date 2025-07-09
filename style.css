@@ -2,6 +2,6 @@ html {
   background-color: #303030;
 }
 
-.the-class{
-  background-color: #FF0000;
+body > div {
+  display: none;
 }
