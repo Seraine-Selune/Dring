@@ -10,16 +10,12 @@
     <div id="phone_picked_up" style="display: none">phone picked up image</div>
     
     <script>
-      document.getElementById("class-button").addEventListener("click", function() {
-        document.getElementById(this.getAttribute('hide-id')).style.display = "none";
-        document.getElementById(this.getAttribute('show-id')).style.display = "inline-block";
+      button.addEventListener('click', function() {
+        const hideId = this.getAttribute('hide-id');
+        const showId = this.getAttribute('show-id');
+        document.getElementById(hideId).style.display = 'none';
+        document.getElementById(showId).style.display = 'inline-block';
       });
     </script>
-    <div id="test">
-      <p>test</p>
-    </div>
-    <div id="test2">
-      <p>test2</p>
-    </div>
   </body>
 </html>
