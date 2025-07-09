@@ -26,6 +26,7 @@
       document.addEventListener('DOMContentLoaded', function() {
         document.querySelectorAll('.class-button').forEach(button => {
           button.addEventListener('click', function() {
+            console.log(hideId, showId);
             const hideId = this.getAttribute('hide-id');
             const showId = this.getAttribute('show-id');
             document.getElementById(hideId).style.display = 'none';
